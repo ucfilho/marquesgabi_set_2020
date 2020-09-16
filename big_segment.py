@@ -30,8 +30,7 @@ def Segmenta(img):
     Row_Crop=1/2 # posicao do corte
     Crop=int(Size*Row_Crop)
 
-    ww,img_name=Go2BlackWhite.BlackWhite(Transfere,Size) #Pegamos a primeira foto Grande
-    img=ww[0]
+    #FotoRotina=img.copy()
 
     Num=50
 
@@ -117,8 +116,7 @@ def Segmenta(img):
     Sub_Size=int(Size/5) # tamanho do fracionamento
     Row_Crop=1/2 # posicao do corte
     Crop=int(Size*Row_Crop)
-    ww,img_name=Go2BlackWhite.BlackWhite(Transfere,Size) #Pegamos a primeira foto Grande
-    img=ww[0]
+   
 
     #First middle
 
@@ -280,20 +278,6 @@ def Segmenta(img):
     frames = [img28_top,img28_middle,img28_bottom]
     img28_all=pd.concat(frames)
 
-    # found drive
-    from google.colab import drive
-    drive.mount('drive')
-
-    ww[11].shape
-
-    img28_all.to_csv('img28_all00.csv',float_format="%.5f")
-    # save in drive
-    !cp img28_all00.csv drive/My\ Drive/Maria_Gabriela_Textura_dados_jan_2020/
-
-    InputAnn=img28_all[['Type','Width']]
-    Choice=img28_all[img28_all.Type.isin(['B','G'])]
-
-    X_fake=Choice[['Type','Width']]
 
     return(ww)
 
