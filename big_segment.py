@@ -88,11 +88,11 @@ def Segmenta(img):
 
     #4th top
 
-    TypesTop=[]
+    #TypesTop=[]
 
-    for i in range(Num):
-      Valor='Z'
-      TypesTop.append(Valor)
+    #for i in range(Num):
+      #Valor='Z'
+      #TypesTop.append(Valor)
 
 
 
@@ -107,7 +107,7 @@ def Segmenta(img):
     # 6th top
 
     img28_top=pd.DataFrame(img28_ravel_all)
-    img28_top.insert(0,"Type",TypesTop)
+    #img28_top.insert(0,"Type",TypesTop)
     img28_top.insert(0, "Width", SizeWidth)
 
     # Start middle
@@ -169,12 +169,12 @@ def Segmenta(img):
 
     #4th middle
 
-    Types_middle=[]
+    #Types_middle=[]
     plt.figure(figsize=(15,15))
     for i in range(Num):
       #print('i=',i,'=====')
       Valor='Z'
-      Types_middle.append(Valor)
+      #Types_middle.append(Valor)
 
     # 5th middle
 
@@ -187,7 +187,7 @@ def Segmenta(img):
     # 6th middle
 
     img28_middle=pd.DataFrame(img28_ravel_all)
-    img28_middle.insert(0,"Type",Types_middle)
+    #img28_middle.insert(0,"Type",Types_middle)
     img28_middle.insert(0, "Width", SizeWidth)
 
     # start bottom
@@ -255,12 +255,12 @@ def Segmenta(img):
 
     # 4th bottom
 
-    Types_bottom=[]
+    #Types_bottom=[]
     plt.figure(figsize=(15,15))
     for i in range(Num):
 
       Valor='Z'
-      Types_bottom.append(Valor)
+      #Types_bottom.append(Valor)
 
     # 5th bottom
 
@@ -272,7 +272,7 @@ def Segmenta(img):
     # 6th bottom
 
     img28_bottom=pd.DataFrame(img28_ravel_all)
-    img28_bottom.insert(0,"Type",Types_bottom)
+    #img28_bottom.insert(0,"Type",Types_bottom)
     img28_bottom.insert(0, "Width", SizeWidth) 
 
     frames = [img28_top,img28_middle,img28_bottom]
