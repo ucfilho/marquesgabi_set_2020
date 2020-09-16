@@ -88,11 +88,11 @@ def Segmenta(img):
 
     #4th top
 
-    Types_top=[]
+    TypesTop=[]
 
     for i in range(Num):
       Valor='Z'
-      Types_top.append(Valor)
+      TypesTop.append(Valor)
 
 
 
@@ -107,7 +107,7 @@ def Segmenta(img):
     # 6th top
 
     img28_top=pd.DataFrame(img28_ravel_all)
-    img28_top.insert(0,"Type",Types_top)
+    img28_top.insert(0,"Type",TypesTop)
     img28_top.insert(0, "Width", SizeWidth)
 
     # Start middle
