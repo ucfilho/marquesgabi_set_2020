@@ -87,17 +87,17 @@ def Segmenta(img):
 
 
     #4th top
-    '''
+    
     #TypesTop=[]
 
     #for i in range(Num):
       #Valor='Z'
       #TypesTop.append(Valor)
-    '''
+    
 
 
     # 5th top
-    '''
+    
     img28_ravel_all=[]
     for i in range(Num):
       img28_ravel=np.copy(img28_all[i].ravel())
@@ -117,7 +117,7 @@ def Segmenta(img):
     Row_Crop=1/2 # posicao do corte
     Crop=int(Size*Row_Crop)
    
-
+    '''
     #First middle
 
     a=0
