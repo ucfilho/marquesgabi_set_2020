@@ -174,7 +174,7 @@ def Segmenta(img):
     #4th middle
 
     #Types_middle=[]
-    plt.figure(figsize=(15,15))
+    #plt.figure(figsize=(15,15))
     for i in range(Num):
       #print('i=',i,'=====')
       Valor='Z'
@@ -260,7 +260,7 @@ def Segmenta(img):
     # 4th bottom
 
     #Types_bottom=[]
-    plt.figure(figsize=(15,15))
+    #plt.figure(figsize=(15,15))
     for i in range(Num):
 
       Valor='Z'
