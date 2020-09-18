@@ -71,7 +71,7 @@ def Segmenta(img):
       label.append(nome)
 
     #2nd top
-    '''
+    
     Size=28
     img28_all=[]
     for i in range(Num):
@@ -87,7 +87,7 @@ def Segmenta(img):
 
 
     #4th top
-
+    '''
     #TypesTop=[]
 
     #for i in range(Num):
@@ -287,5 +287,5 @@ def Segmenta(img):
     '''
     
     print('===== I am not df =======')
-    print(img_1st)
+    print(img28_all)
     return(img_1st)
