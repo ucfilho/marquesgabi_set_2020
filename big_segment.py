@@ -32,8 +32,8 @@ def Segmenta(img):
     Crop=int(Size*Row_Crop)
 
     #FotoRotina=img.copy()
-    print('------START--------')
-    print(img)
+    #print('------START--------')
+    #print(img)
     Num=50
 
     #First top
@@ -122,8 +122,6 @@ def Segmenta(img):
     
     #First middle
     img=img_ver.copy()
-    print('-------------------')
-    print(img)
     a=0
     b=1200
     c=100
@@ -132,13 +130,13 @@ def Segmenta(img):
     ww=[]
     label=[]
     SizeWidth=[]  
+
     for i in range(Num):
       x=randint(a, b)
       y=randint(a, b)
       Width=randint(c, d)
       img_1st=np.zeros((Width,Width)).astype(np.int64)
 
-    
       for i in range(Width):
         for j in range(Width):
 
@@ -152,6 +150,7 @@ def Segmenta(img):
             y=Size-Width
 
           img_1st[i,j]=np.copy(img[i+y,j+x])
+
       ww.append(img_1st)
       SizeWidth.append(Width)
       nome = "W=" + str(Width)+" x="+str(x)+" y="+str(y)
