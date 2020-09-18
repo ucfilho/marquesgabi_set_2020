@@ -25,6 +25,7 @@ import Go2Mahotas
 # start top
 def Segmenta(img):
     #Start to use the big image
+    img_ver=img.copy()
     Size=1200 # tamanho da foto
     Sub_Size=int(Size/5) # tamanho do fracionamento
     Row_Crop=1/2 # posicao do corte
@@ -119,7 +120,7 @@ def Segmenta(img):
    
     
     #First middle
-
+    img=img_ver.copy()
     a=0
     b=1200
     c=100
