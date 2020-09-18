@@ -133,9 +133,8 @@ def Segmenta(img):
       y=randint(a, b)
       Width=randint(c, d)
       img_1st=np.zeros((Width,Width)).astype(np.int64)
-      break
-    ''' '''
-    '''
+
+    
       for i in range(Width):
         for j in range(Width):
 
@@ -153,7 +152,7 @@ def Segmenta(img):
       SizeWidth.append(Width)
       nome = "W=" + str(Width)+" x="+str(x)+" y="+str(y)
       label.append(nome)
-    '''
+    ''''''
     '''    
     #2nd middle
 
