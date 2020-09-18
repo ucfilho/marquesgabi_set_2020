@@ -287,5 +287,5 @@ def Segmenta(img):
     '''
     
     print('===== I am not df =======')
-    print(img28_all)
+    print(img28_all.shape)
     return(img_1st)
