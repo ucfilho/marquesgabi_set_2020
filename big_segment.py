@@ -28,7 +28,7 @@ def Segmenta(img):
     img_ver=img.copy()
     Size=1200 # tamanho da foto
     Sub_Size=int(Size/5) # tamanho do fracionamento
-    Row_Crop=1/2 # posicao do corte
+    Row_Crop=1/10 # posicao do corte
     Crop=int(Size*Row_Crop)
 
     #FotoRotina=img.copy()
@@ -199,7 +199,7 @@ def Segmenta(img):
     #Start to use the big image
     Size=1200 # tamanho da foto
     Sub_Size=int(Size/5) # tamanho do fracionamento
-    Row_Crop=1/2 # posicao do corte
+    Row_Crop=9/10 # posicao do corte
     Crop=int(Size*Row_Crop)
 
 
