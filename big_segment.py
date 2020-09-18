@@ -155,8 +155,7 @@ def Segmenta(img):
       SizeWidth.append(Width)
       nome = "W=" + str(Width)+" x="+str(x)+" y="+str(y)
       label.append(nome)
-    ''''''
-    '''    
+
     #2nd middle
 
     Size=28
@@ -283,12 +282,5 @@ def Segmenta(img):
 
     frames = [img28_top,img28_middle,img28_bottom]
     img28_all=pd.concat(frames)
-    '''
 
-    '''
-    return(ww)
-    '''
-    
-    print('===== I am not df =======')
-    print(img28_all.shape)
     return(img_1st)
