@@ -32,7 +32,8 @@ def Segmenta(img):
     Crop=int(Size*Row_Crop)
 
     #FotoRotina=img.copy()
-
+    print('------START--------')
+    print(img)
     Num=50
 
     #First top
@@ -121,6 +122,8 @@ def Segmenta(img):
     
     #First middle
     img=img_ver.copy()
+    print('-------------------')
+    print(img)
     a=0
     b=1200
     c=100
