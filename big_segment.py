@@ -117,7 +117,7 @@ def Segmenta(img):
     Row_Crop=1/2 # posicao do corte
     Crop=int(Size*Row_Crop)
    
-    '''
+    
     #First middle
 
     a=0
@@ -134,7 +134,7 @@ def Segmenta(img):
       Width=randint(c, d)
       img_1st=np.zeros((Width,Width)).astype(np.int64)
       break
-    '''
+    ''' '''
     '''
       for i in range(Width):
         for j in range(Width):
