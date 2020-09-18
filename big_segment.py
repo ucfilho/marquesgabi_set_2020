@@ -71,7 +71,7 @@ def Segmenta(img):
       label.append(nome)
 
     #2nd top
-
+    '''
     Size=28
     img28_all=[]
     for i in range(Num):
@@ -93,11 +93,11 @@ def Segmenta(img):
     #for i in range(Num):
       #Valor='Z'
       #TypesTop.append(Valor)
-
+    '''
 
 
     # 5th top
-
+    '''
     img28_ravel_all=[]
     for i in range(Num):
       img28_ravel=np.copy(img28_all[i].ravel())
@@ -133,7 +133,8 @@ def Segmenta(img):
       y=randint(a, b)
       Width=randint(c, d)
       img_1st=np.zeros((Width,Width)).astype(np.int64)
-      break   
+      break
+     '''
       '''
       for i in range(Width):
         for j in range(Width):
@@ -284,6 +285,7 @@ def Segmenta(img):
     '''
     return(ww)
     '''
+    
     print('===== I am not df =======')
     print(img_1st)
     return(img_1st)
