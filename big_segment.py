@@ -201,8 +201,7 @@ def Segmenta(img):
     Sub_Size=int(Size/5) # tamanho do fracionamento
     Row_Crop=1/2 # posicao do corte
     Crop=int(Size*Row_Crop)
-    ww,img_name=Go2BlackWhite.BlackWhite(Transfere,Size) #Pegamos a primeira foto Grande
-    img=ww[0]
+
 
     # First bottom
     img=img_ver.copy()
