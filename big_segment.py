@@ -284,4 +284,6 @@ def Segmenta(img):
     '''
     return(ww)
     '''
+    print('============')
+    print(img_1st)
     return(img_1st)
