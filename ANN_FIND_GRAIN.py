@@ -23,8 +23,9 @@ from tensorflow import keras
 #                    train no-grain
 
 """# 03_ANN_NEW_DATA... only the grains in 882 are used for training the ANN and segmented images are used to train no-grain"""
-def AnnGrain(Matrix):
+def AnnGrain(df):
   # Commented out IPython magic to ensure Python compatibility.
+  '''
   !git clone https://github.com/marquesgabi/Doutorado
   # %cd Doutorado
   Transfere='FotosTreino882_and_Segm.zip'
@@ -46,6 +47,7 @@ def AnnGrain(Matrix):
     df_new = df_new[~df_new['Type'].isin(['G'])] # drop grain row which is not in 882
     frames = [df, df_new]
     df= pd.concat(frames, ignore_index=True)
+  '''
 
   y_valor=df['Type']
 
