@@ -282,4 +282,4 @@ def Segmenta(img):
     frames = [img28_top,img28_middle,img28_bottom]
     img28_all=pd.concat(frames)
 
-    return(img_1st)
+    return(img28_all)
