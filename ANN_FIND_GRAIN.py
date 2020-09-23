@@ -23,7 +23,7 @@ from tensorflow import keras
 #                    train no-grain
 
 """# 03_ANN_NEW_DATA... only the grains in 882 are used for training the ANN and segmented images are used to train no-grain"""
-def AnnGrain(df):
+def AnnGrain(df,df_class):
   y_valor=df['Type']
 
   quantidade= df.groupby('Type').size()
