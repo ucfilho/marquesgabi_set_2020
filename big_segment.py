@@ -281,5 +281,12 @@ def Segmenta(img):
 
     frames = [img28_top,img28_middle,img28_bottom]
     img28_all=pd.concat(frames)
+    
+    print(pd.DataFrame(img28_top))
+    print('=====================')
+    print(pd.DataFrame(img28_middle))
+    print('=======oooooo==========')
+    print(pd.DataFrame(img28_bottom))
+    
 
     return(img28_all)
