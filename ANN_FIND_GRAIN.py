@@ -24,31 +24,6 @@ from tensorflow import keras
 
 """# 03_ANN_NEW_DATA... only the grains in 882 are used for training the ANN and segmented images are used to train no-grain"""
 def AnnGrain(df):
-  # Commented out IPython magic to ensure Python compatibility.
-  '''
-  !git clone https://github.com/marquesgabi/Doutorado
-  # %cd Doutorado
-  Transfere='FotosTreino882_and_Segm.zip'
-  file_name = zipfile.ZipFile(Transfere, 'r')
-  file_name.extractall()
-
-  """# First step: get the segmented file (photos stored in csv file)"""
-
-  labels = [] #name files
-
-  with zipfile.ZipFile(Transfere, "r") as f:
-    for f in f.namelist():
-      labels.append(f)
-
-  Num=len(labels)
-  df=pd.read_csv(labels[0])
-  for i in range(1,Num):
-    df_new=pd.read_csv(labels[i])
-    df_new = df_new[~df_new['Type'].isin(['G'])] # drop grain row which is not in 882
-    frames = [df, df_new]
-    df= pd.concat(frames, ignore_index=True)
-  '''
-
   y_valor=df['Type']
 
   quantidade= df.groupby('Type').size()
