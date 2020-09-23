@@ -7,15 +7,11 @@ from random import randint
 from PIL import Image
 import re
 from sklearn.model_selection import train_test_split
-#import scikit-image
 import skimage
 import pandas as pd
 import sklearn
 import matplotlib.pyplot as plt
 
-!pip install mahotas
-
-# Import the 'transform' module from 'skimage'
 from skimage import transform
 
 # TensorFlow and tf.keras
