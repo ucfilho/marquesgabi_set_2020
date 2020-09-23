@@ -125,6 +125,7 @@ def AnnGrain(df,df_class):
   y_pred = df['y_Predicted']
 
   METRICS=sklearn.metrics.classification_report(y_true, y_pred)
+  
+  y_predict=METRICS.copy()
 
-
-  return confusion_matrix,METRICS 
+  return y_predict,confusion_matrix,METRICS 
