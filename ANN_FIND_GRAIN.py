@@ -109,7 +109,7 @@ def AnnGrain(df,df_class):
   x=np.array(W_test)
   logits = model(x, training=False)
   prediction = tf.argmax(logits, axis=1, output_type=tf.int32)
-
+  
   y_valor=np.copy(yw_test)
   data = {'y_Actual': y_valor,
           'y_Predicted': prediction
@@ -126,6 +126,9 @@ def AnnGrain(df,df_class):
 
   METRICS=sklearn.metrics.classification_report(y_true, y_pred)
   
-  y_predict=METRICS
+  x_seg=np.array(df_class)
+  logits = model(x_seg, training=False)
+  y_pred= tf.argmax(logits, axis=1, output_type=tf.int32)
+  y_pred= np.array(pd.DataFrame(y_pred))
 
-  return y_predict,confusion_matrix,METRICS 
+  return y_pred,confusion_matrix,METRICS 
