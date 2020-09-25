@@ -42,6 +42,8 @@ def Mahotas(Prop,df):
 
     rows,cols=df.shape
     
+    y=np.ones(rows)
+    
     Num=rows
 
     # select just the grains to show picture
