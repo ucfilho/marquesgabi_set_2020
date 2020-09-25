@@ -38,7 +38,7 @@ import re
 import Go2BlackWhite
 import Go2Mahotas
 
-def Mahotas(Prop,df):
+def Mahotas(Prop,df,Width_All):
 
     rows,cols=df.shape
     
