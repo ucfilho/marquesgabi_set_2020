@@ -40,14 +40,9 @@ import Go2Mahotas
 
 def Mahotas(Prop,df):
 
-    #ANN das imagens
-    x=np.array(df)
-    logits = model(x, training=False)
-    prediction = tf.argmax(logits, axis=1, output_type=tf.int32)
-    #print(prediction)
-
-    y=np.array(prediction)
-    Num=len(y)
+    rows,cols=df.shape
+    
+    Num=rows.copy()
 
     # select just the grains to show picture
     grain=[]
