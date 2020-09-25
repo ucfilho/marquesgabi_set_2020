@@ -49,7 +49,7 @@ def Mahotas(Prop,df):
     Mahotas_Prop=[]
     Todas_Fotos=[] 
 
-    img28_all=pd.DataFrame(x)
+    img28_all=pd.DataFrame(df)
     Width_Grain_2=[]
 
     Size=28 # tamanho da foto
