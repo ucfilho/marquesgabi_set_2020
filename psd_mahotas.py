@@ -42,7 +42,7 @@ def Mahotas(Prop,df):
 
     rows,cols=df.shape
     
-    Num=rows.copy()
+    Num=rows
 
     # select just the grains to show picture
     grain=[]
