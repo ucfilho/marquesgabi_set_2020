@@ -42,7 +42,7 @@ def Mahotas(Prop,df,Width_All):
 
     rows,cols=df.shape
     
-    y=np.ones(rows)
+    y=np.ones(rows,dtype=np.int8)
     
     Num=rows
 
