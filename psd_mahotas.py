@@ -45,9 +45,7 @@ def Mahotas(Prop,df,Width_All):
     x=np.array(df)
     img28_all=pd.DataFrame(x)
     
-    print('*****oooooo*****oooooo***')
-    print(img28_all)
-    print('*****oooooo*****oooooo***')
+
     Width_Grain_2=[]
 
     Size=28 # tamanho da foto
@@ -66,7 +64,10 @@ def Mahotas(Prop,df,Width_All):
     cols=5 # ???????????????
     rows=int(len(grain)/cols)+1
     Grao_in_All28=[]
-
+    print('*****oooooo*****oooooo***')
+    print(Width_Grain_2)
+    print(rows)
+    print('*****oooooo*****oooooo***')
     for i in range(Num):
       if(y[i]==1):
         Grao_in_All28.append(i)
