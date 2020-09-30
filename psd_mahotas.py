@@ -98,6 +98,12 @@ def Mahotas(Prop,df,Width_All):
                 Posicao_Y.append(j+k)
 
             WW=np.copy(p) 
+            
+            print('*****oooooo*****oooooo***')
+            print(WW.shape)
+            print('*****oooooo*****oooooo***')
+            print(gwl)
+            
             Cada_foto.append(WW.ravel())
             x_ref.append(Count-Sub_Size)
             Count=Count+1
@@ -108,6 +114,10 @@ def Mahotas(Prop,df,Width_All):
         Todas_Fotos.append(Prop_Escolhida)
 
     df_mahotas=pd.DataFrame(Todas_Fotos)
+    
+    print('====*******======')
+    print(df_mahotas)
+    print('================')
 
     #plt.subplots_adjust(bottom=0.1, right=1.2, top=2,hspace=0.3, wspace=0.1)
 
