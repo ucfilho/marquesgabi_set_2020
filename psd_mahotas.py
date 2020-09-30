@@ -157,7 +157,10 @@ def Mahotas(Prop,df,Width_All):
                         'Width_peaks_min','Median','Mode','Mean','Sd'] 
 
     Features_Total=pd.DataFrame(Features_Total,columns=Nomes_PSD)
-
+    
+    print('==============')
+    print(Features_Total)
+    print('==============')
     #print(Features_Total)
     # Features_total represents properties without considering there is no class 
     # Features_total describes all grains found by the ANN
