@@ -12,6 +12,8 @@ from scipy import integrate
 import re
 import Go2BlackWhite
 import Go2Mahotas
+import numpy as np
+import pandas as pd
 
 
 def Mahotas(Prop,df,Width_All):
