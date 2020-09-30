@@ -44,6 +44,10 @@ def Mahotas(Prop,df,Width_All):
     Todas_Fotos=[] 
     x=np.array(df)
     img28_all=pd.DataFrame(x)
+    
+    print('*****oooooo*****oooooo***')
+    print(img28_all)
+    print('*****oooooo*****oooooo***')
     Width_Grain_2=[]
 
     Size=28 # tamanho da foto
