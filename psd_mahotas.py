@@ -14,7 +14,7 @@ import Go2BlackWhite
 import Go2Mahotas
 
 
-df_mahotas=Mahotas(Prop,df,Width_All):
+def Mahotas(Prop,df,Width_All):
     '''
     Escolha=['ASM', 'constrast', 'correl', 'variance', 'inv diff mom', 'sum aveg', 
              'sum var', 'sum entropy', 'entropy', 'dif var', 'dif entropy', 
