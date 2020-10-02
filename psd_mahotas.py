@@ -56,7 +56,7 @@ def Mahotas(Prop,df,Width_All):
 
 
     for i in range(Num):
-      print('*****iiiii*****oooooo***')  
+       
       if(y[i]==1):
         grain.append(i)
         Width_Grain_2.append(Width_All[i])
@@ -64,7 +64,9 @@ def Mahotas(Prop,df,Width_All):
     cont=0 # 
     cols=5 # ???????????????
     rows=int(len(grain)/cols)+1
+    print('*****iiiii*****oooooo***') 
     Grao_in_All28=[]
+    print(grain)
     print('*****oooooo*****oooooo***')
     print(Width_Grain_2)
     print(rows)
