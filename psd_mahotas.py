@@ -56,6 +56,7 @@ def Mahotas(Prop,df,Width_All):
 
 
     for i in range(Num):
+      print('*****iiiii*****oooooo***')  
       if(y[i]==1):
         grain.append(i)
         Width_Grain_2.append(Width_All[i])
