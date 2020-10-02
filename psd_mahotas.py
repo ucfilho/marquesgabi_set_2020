@@ -60,7 +60,7 @@ def Mahotas(Prop,df,Width_All):
       if(y[i]==1):
         grain.append(i)
         Width_Grain_2.append(Width_All[i])
-
+    print('*****iiiii*****aaaaaa***')
     cont=0 # 
     cols=5 # ???????????????
     rows=int(len(grain)/cols)+1
