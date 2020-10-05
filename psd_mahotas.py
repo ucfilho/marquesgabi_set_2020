@@ -17,11 +17,11 @@ import pandas as pd
 
 
 def Mahotas(Prop,df,Width_All):
-    '''
+    
     Escolha=['ASM', 'constrast', 'correl', 'variance', 'inv diff mom', 'sum aveg', 
              'sum var', 'sum entropy', 'entropy', 'dif var', 'dif entropy', 
              'IMC1', 'IMC2']
-
+    '''
     Prop=Escolha[1] # Propriedade a escolher para ter picos, largura de pico, proeminencia,...
     '''
 
