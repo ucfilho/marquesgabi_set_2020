@@ -48,28 +48,28 @@ def Mahotas(Prop,df,Width_All):
     #Row_Crop=1/3 # posicao do corte
     Crop=int(Size*Row_Crop)
     
-    print('*****iiiii*****aaaaaa***')
-    print(Width_All)
-    Width_Grain_2.append(Width_All[2])
-    print(Width_Grain_2)
+    #print('*****iiiii*****aaaaaa***')
+    #print(Width_All)
+    #Width_Grain_2.append(Width_All[2])
+    #print(Width_Grain_2)
 
 
     for i in range(Num):
        
       if(y[i]==1):
         grain.append(i)
-        Width_Grain_2.append(Width_All[i])
-    print('*****iiiii*****aaaaaa***')
+        Width_Grain_2.append(Width_All.iloc[i])
+    #print('*****iiiii*****aaaaaa***')
     cont=0 # 
     cols=5 # ???????????????
     rows=int(len(grain)/cols)+1
-    print('*****iiiii*****oooooo***') 
+    #print('*****iiiii*****oooooo***') 
     Grao_in_All28=[]
-    print(grain)
-    print('*****oooooo*****oooooo***')
-    print(Width_Grain_2)
-    print(rows)
-    print('*****oooooo*****oooooo***')
+    #print(grain)
+    #print('*****oooooo*****oooooo***')
+    #print(Width_Grain_2)
+    #print(rows)
+    #print('*****oooooo*****oooooo***')
     for i in range(Num):
       if(y[i]==1):
         Grao_in_All28.append(i)
