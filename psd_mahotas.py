@@ -50,7 +50,7 @@ def Mahotas(Prop,df,Width_All):
     
     print('*****iiiii*****aaaaaa***')
     print(Width_All)
-    Width_Grain_2.append(Width_All[i])
+    Width_Grain_2.append(Width_All[2])
     print(Width_Grain_2)
 
 
