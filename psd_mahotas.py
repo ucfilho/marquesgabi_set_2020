@@ -28,9 +28,6 @@ def Mahotas(Prop,df,Width_All):
     row,cols=df.shape
     y=np.ones(row)
     Num=len(y)
-    #print(Num)
-
-    #print(y)
 
     # select just the grains to show picture
     grain=[]
@@ -47,44 +44,26 @@ def Mahotas(Prop,df,Width_All):
     Row_Crop=1/2 # posicao do corte
     #Row_Crop=1/3 # posicao do corte
     Crop=int(Size*Row_Crop)
-    
-    #print('*****iiiii*****aaaaaa***')
-    #print(Width_All)
-    #Width_Grain_2.append(Width_All[2])
-    #print(Width_Grain_2)
-
 
     for i in range(Num):
        
       if(y[i]==1):
         grain.append(i)
         Width_Grain_2.append(Width_All.iloc[i])
-    #print('*****iiiii*****aaaaaa***')
+
     cont=0 # 
     cols=5 # ???????????????
     rows=int(len(grain)/cols)+1
-    #print('*****iiiii*****oooooo***') 
+
     Grao_in_All28=[]
-    #print(grain)
-    #print('*****oooooo*****oooooo***')
-    #print(Width_Grain_2)
-    #print(rows)
-    #print('*****oooooo*****oooooo***')
+
     for i in range(Num):
       if(y[i]==1):
         Grao_in_All28.append(i)
         cont=cont+1
-        #plt.subplot(rows,cols,cont) # subplot not allow cont=0
-        #plt.xticks([])
-        #plt.yticks([])
-        #plt.grid(False)
         Foto=np.array(img28_all.iloc[i]).reshape(28,28)
-        #plt.imshow(Foto, cmap = "gray")
-        #plt.xlabel(i)
 
         Prop_Escolhida=[]
-
-        # p_foto=ww[k].reshape(Size,Size)
         p_foto=Foto
         GLCM=[]
         glcm_haralick=[]
@@ -97,7 +76,7 @@ def Mahotas(Prop,df,Width_All):
         Posicao_Y=[]
         for k in range(Size):
           if((k+Sub_Size-1)<Size):
-            #print("(k+Sub_Size)=",(k+Sub_Size),"k=",k)
+
             for i in range(Sub_Size):
               Posicao_X.append(Crop+i)
               for j in range(Sub_Size):
@@ -105,11 +84,6 @@ def Mahotas(Prop,df,Width_All):
                 Posicao_Y.append(j+k)
 
             WW=np.copy(p) 
-            
-            # print('*****oooooo*****oooooo***')
-            # print(WW.shape)
-            # print('*****oooooo*****oooooo***')
-            # print(gwl)
             
             Cada_foto.append(WW.ravel())
             x_ref.append(Count-Sub_Size)
@@ -121,12 +95,6 @@ def Mahotas(Prop,df,Width_All):
         Todas_Fotos.append(Prop_Escolhida)
 
     df_mahotas=pd.DataFrame(Todas_Fotos)
-    
-    print('====*******======')
-    print(df_mahotas)
-    print('================')
-
-    #plt.subplots_adjust(bottom=0.1, right=1.2, top=2,hspace=0.3, wspace=0.1)
 
     Features_Total=[]
     cont=-1
@@ -174,30 +142,15 @@ def Mahotas(Prop,df,Width_All):
                         'Width_peaks_min','Median','Mode','Mean','Sd'] 
 
     Features_Total=pd.DataFrame(Features_Total,columns=Nomes_PSD)
-    
-    print('==============')
-    print(Features_Total)
-    print('==============')
-    #print(Features_Total)
-    # Features_total represents properties without considering there is no class 
-    # Features_total describes all grains found by the ANN
 
     rows=1;cols=2
     k=8
-    #plt.subplot(rows,cols,1)
-    #plt.plot(df_mahotas.iloc[k])
-    Foto=np.array(img28_all.iloc[Grao_in_All28[k]]).reshape(28,28)
-    #plt.subplot(rows,cols,2)
-    #plt.imshow(Foto, cmap = "gray")
 
-    #print(Width_Grain_2)
+    Foto=np.array(img28_all.iloc[Grao_in_All28[k]]).reshape(28,28)
 
     Width_Grain=Width_All.iloc[grain]
 
     Width_Grain=np.array(Width_Grain) # passando de Serie (dataframe 1d) para np.array
-    #print(Width_Grain)
-
-    #print(Width_Grain_2) # lista : tem virgula entre os elementos
 
     """# Fifth step create classes"""
 
@@ -210,9 +163,7 @@ def Mahotas(Prop,df,Width_All):
     for i in range(N_Class-1):
       valor=a+delta_ab*(i+1)
       Class.append(valor)
-
-    #print(Class)
-
+        
     Num=len(Width_Grain)
     count=[0,0,0,0]
     Hist_Width=[]
@@ -230,14 +181,9 @@ def Mahotas(Prop,df,Width_All):
         count[3]=count[3]+1
         Hist_Width.append(3)
 
-    #print(count)
     N_count=np.copy(count)
 
     Nomes_class=['until_w1','w1-w2','w2-w3','bigger-w3']+Nomes_PSD
-
-    #print(Hist_Width)
-
-    #print(Features_Total.iloc[0,1])
 
     rows=len(Width_Grain)
     cols=len(Nomes_PSD)
@@ -248,7 +194,6 @@ def Mahotas(Prop,df,Width_All):
       for j in range(cols):  
         Features_Class[k,j]=Features_Class[k,j]+ Features_Total.iloc[i,j]
 
-    #print(pd.DataFrame(Features_Class,columns=Nomes_PSD))
 
     for i in range(4):
       if(N_count[i]==0):
@@ -256,8 +201,5 @@ def Mahotas(Prop,df,Width_All):
       else:
         fator=1/N_count[i]
       Features_Class[i,:]=Features_Class[i,:]*fator
-    #print(pd.DataFrame(Features_Class,columns=Nomes_PSD))
 
-    #print(N_count)
-    
     return Features_Total
