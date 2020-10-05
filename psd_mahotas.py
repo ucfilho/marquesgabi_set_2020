@@ -106,10 +106,10 @@ def Mahotas(Prop,df,Width_All):
 
             WW=np.copy(p) 
             
-            print('*****oooooo*****oooooo***')
-            print(WW.shape)
-            print('*****oooooo*****oooooo***')
-            print(gwl)
+            # print('*****oooooo*****oooooo***')
+            # print(WW.shape)
+            # print('*****oooooo*****oooooo***')
+            # print(gwl)
             
             Cada_foto.append(WW.ravel())
             x_ref.append(Count-Sub_Size)
@@ -211,7 +211,7 @@ def Mahotas(Prop,df,Width_All):
       valor=a+delta_ab*(i+1)
       Class.append(valor)
 
-    print(Class)
+    #print(Class)
 
     Num=len(Width_Grain)
     count=[0,0,0,0]
