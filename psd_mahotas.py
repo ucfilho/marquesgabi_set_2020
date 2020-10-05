@@ -24,13 +24,7 @@ def Mahotas(Prop,df,Width_All):
 
     Prop=Escolha[1] # Propriedade a escolher para ter picos, largura de pico, proeminencia,...
     '''
-    #ANN das imagens
-    #x=np.array(df)
-    #logits = model(x, training=False)
-    #prediction = tf.argmax(logits, axis=1, output_type=tf.int32)
-    #print(prediction)
 
-    #y=np.array(prediction)
     row,cols=df.shape
     y=np.ones(row)
     Num=len(y)
@@ -56,6 +50,8 @@ def Mahotas(Prop,df,Width_All):
     
     print('*****iiiii*****aaaaaa***')
     print(Width_All)
+    Width_Grain_2.append(Width_All[i])
+    print(Width_Grain_2)
 
 
     for i in range(Num):
