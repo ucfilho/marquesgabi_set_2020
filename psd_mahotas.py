@@ -53,6 +53,9 @@ def Mahotas(Prop,df,Width_All):
     Row_Crop=1/2 # posicao do corte
     #Row_Crop=1/3 # posicao do corte
     Crop=int(Size*Row_Crop)
+    
+    print('*****iiiii*****aaaaaa***')
+    print(Width_All)
 
 
     for i in range(Num):
